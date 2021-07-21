@@ -5,9 +5,6 @@ exceptions.txt
 # VS Code
 .vscode/
 
-# Local History for Visual Studio Code
-.history/
-
 ########## PYTHON ##########
 # Auto-py-to-exe
 output/
