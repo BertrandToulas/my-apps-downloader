@@ -25,17 +25,17 @@ Besides, while apps like Ninite already do this very well, it lacks two features
 
 ## FAQ / Current limitations
 
-**Which OS is this compatible with?**
+**Which OS is this compatible with?**  
 Only 64-bit Windows.
 
-**Which apps will this download?**
+**Which apps will this download?**  
 The ones I needed at the time. There are 35+ currently. You can find the list in `apps.py`.
 
-**Are those the latest versions of the software?**
-For most of them, yes, no matter when you run the script (unless the site structure changes and breaks the code).
+**Are those the latest versions of the software?**  
+For most of them, yes, no matter when you run the script (unless the site structure changes and breaks the code).  
 However, some of them are whatever the most recent stable build was at the time of the last push, usually because I haven't yet figured out how to scrape their sites for automatic updates. In those cases, a `download_url` parameter is provided in `apps.py`.
 
-**Can I contribute? Can I download my own list of apps?**
-Yes to both! The script is licensed under GNU General Public License v3.0. Changes, improvements and additions welcome. 
-To customize the list of apps you'd like to download, simply edit `apps.py`. See inside the file for instructions.
+**Can I contribute? Can I download my own list of apps?**  
+Yes to both! The script is licensed under GNU General Public License v3.0. Changes, improvements and additions welcome.   
+To customize the list of apps you'd like to download, simply edit `apps.py`. See inside the file for instructions.  
 You will most likely have to test any app you want do add though, as every site is built differently.
