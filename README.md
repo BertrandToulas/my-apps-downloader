@@ -5,6 +5,8 @@
 What it says on the tin! The script automatically downloads a list of setup files for a variety of programs/apps.
 By default, the files will all be downloaded to an "installers" folder on your desktop.
 
+Please note: Don't attempt to run the program multiple times in a row. Some sites might block you temporarily for exceeding the bandwidth limit! 
+
 ## How to use
 
 2 ways:
@@ -15,12 +17,11 @@ Note: You can package the script into an .exe yourself using `auto-py-to-exe` at
 
 ## What's the point?
 
-I recently had to do a clean install of Windows, had no backup, and it took me ages to remember what I needed and to redownload everything manually. This streamlines the process greatly.
+I recently had to do a clean install of Windows, had no backup, and it took me ages to remember which software I needed and to redownload everything manually. This streamlines the process greatly.
 
 Besides, while apps like Ninite already do this very well, it lacks two features I wanted:
 - being able to download exactly _all_ the programs _I_ personally need, as opposed to "most" of them
 - having control over how I want to install each program.
-
 
 
 ## FAQ / Current limitations
@@ -38,4 +39,4 @@ However, some of them are whatever the most recent stable build was at the time 
 **Can I contribute? Can I download my own list of apps?**  
 Yes to both! The script is licensed under GNU General Public License v3.0. Changes, improvements and additions welcome.   
 To customize the list of apps you'd like to download, simply edit `apps.py`. See inside the file for instructions.  
-You will most likely have to test any app you want do add though, as every site is built differently.
+Use `test_my-apps-downloader.py` to test any app you may add, as every site is built differently.
