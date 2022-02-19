@@ -1,3 +1,5 @@
+'''Current version: 0.1.1'''
+
 import os
 import sys
 import pathlib
@@ -53,15 +55,16 @@ if __name__ == '__main__':
         os.mkdir(download_path)
     os.chdir(download_path)
 
-    # Open target folder
-    path = os.path.realpath(download_path)
-    os.startfile(path)
-
     freeze_support() # keeps concurrent.futures from causing issues
 
+    apps_list = list(apps.programs.values())
+    # For testing purposes
+    # names = list(apps.programs.keys())[:10]
+    # print(names)
+    # sample = apps_list[:10]
     # Download everything from apps.py
     # 6 threads is the sweet spot for performance with 30-40 apps
-    thread_map(download_app, apps.programs.values(), max_workers=6)
+    thread_map(download_app, apps_list, max_workers=6, colour='green')
 
     # Alternative for multithreading (but no progress bar)
     # import concurrent.futures
@@ -69,4 +72,13 @@ if __name__ == '__main__':
     #     executor.map(download_app, apps.programs.values())
 
     print("All files successfully downloaded.")
-    input("Press any key to exit.")
+
+    while True:
+        open_folder = input("The program will now exit. Would you like to open the destination folder? (y/n) ").strip().lower()
+        if open_folder in ('yes', 'y'):
+            # Open target folder
+            path = os.path.realpath(download_path)
+            os.startfile(path)
+            sys.exit()
+        elif open_folder in ('no', 'n'):
+            sys.exit()
