@@ -50,7 +50,7 @@ programs = {
     'Audacity' :
         cl.App( 'Audacity',
                 r'https://github.com/audacity/audacity/releases',
-                re.compile(r'audacity-win-\d\.\d{1,2}\.\d{1,2}\.exe')),
+                re.compile(r'audacity-win-\d\.\d{1,2}\.\d{1,2}-64bit.exe')),
     'Authy' :
         cl.App( 'Authy',
                 r'https://electron.authy.com/download?channel=stable&arch=x64&platform=win32&version=latest&product=authy',
@@ -106,8 +106,8 @@ programs = {
                 r'https://sourceforge.net/projects/goldendict/files/early%20access%20builds/Qt5-based/64bit/',
                 re.compile(r'GoldenDict-1\.5\.0-RC2-372-.+QT_5123.+64bit.+\.7z'),
                 download_url=r'https://netcologne.dl.sourceforge.net/project/goldendict/early%20access%20builds/Qt5-based/64bit/GoldenDict-1.5.0-RC2-372-gc3ff15f_%28QT_5123%29%2864bit%29.7z'),
-    'Google Drive' :
-        cl.App( 'Google Drive',
+    'Google Drive (Backup and Sync)' :
+        cl.App( 'Google Drive (Backup and Sync)',
                 r'https://www.google.com/drive/download/',
                 re.compile(r'installbackupandsync.exe$'),
                 download_url=r'https://dl.google.com/tag/s/appguid%3D%7B3C122445-AECE-4309-90B7-85A6AEF42AC0%7D%26iid%3D%7B9648D435-67BA-D2A7-54D2-1E0B5656BF03%7D%26ap%3Duploader%26appname%3DBackup%2520and%2520Sync%26needsadmin%3Dtrue/drive/installbackupandsync.exe'),
@@ -127,8 +127,9 @@ programs = {
                 download_url='https://desktop.line-scdn.net/win/new/LineInst.exe'),
     'Logitech Options' :
         cl.App( 'Logitech Options',
-                r'https://www.logitech.com/en-us/product/options',
-                re.compile(r'Options_.+\.exe$')),
+                r'https://download01.logi.com/web/ftp/pub/techsupport/options/options_installer.exe',
+                re.compile(r'options_installer\.exe'),
+                download_url='https://download01.logi.com/web/ftp/pub/techsupport/options/options_installer.exe'),
     'Logitech SetPoint 6.70.55 x64' :
         cl.App( 'Logitech SetPoint 6.70.55 x64',
                 r'https://support.logi.com/hc/en-us/articles/360025141274-SetPoint',
