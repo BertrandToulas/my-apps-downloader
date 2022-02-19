@@ -27,7 +27,8 @@ if __name__ == '__main__':
     os.startfile(path)
 
     # Insert app to test here
-    to_test = apps.programs['insert_app_name']
+    app_name = 'insert_app_name_here'
+    to_test = apps.programs[app_name]
     download_app(to_test)
 
     print(f"{to_test} successfully downloaded.")
